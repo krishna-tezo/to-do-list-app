@@ -1,0 +1,89 @@
+.side-panel{
+  width: 100%;
+  margin-top: 12%;
+}
+
+.side-panel div {
+  width: 100%;
+  margin: 5% 0;
+  padding: 3% 0;
+  text-decoration: none;
+  text-align: center;
+}
+
+
+.add-task-btn {
+  margin: 3% auto;
+  background: #ffff;
+  border: none;
+  display: flex;
+  gap: 5%;
+  width: 50%;
+  height: 3rem;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1rem;
+  opacity: 80%;
+  font-weight: 600;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 10px;
+  margin-bottom: 20%;
+}
+
+.side-panel div:hover {
+  background-color: #edb046;
+}
+
+.add-task-btn img {
+  height: 1.5rem;
+}
+
+.top-panel {
+  display: none;
+  flex-direction: column;
+}
+
+.top-panel.show .menu {
+  display: flex;
+}
+
+.top-panel .selected-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #edb046;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.top-panel .menu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-panel .menu div {
+  width: 100%;
+  margin: 1% 0;
+  padding: 1% 0;
+  display: block;
+  text-decoration: none;
+}
+
+.menu div:hover {
+  background-color: #edb046;
+}
+
+.menu-button:hover {
+  background-color: #edb046;
+}
+
+@media (max-width: 768px) {
+  .side-panel {
+    display: none;
+  }
+
+  .top-panel {
+    display: block;
+  }
+}

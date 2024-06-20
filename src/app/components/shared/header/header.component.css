@@ -1,0 +1,39 @@
+.header-app-title{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.header-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-active-window-title{
+    margin-left: 1.8vw;
+}
+
+.sign-out-btn{
+    display: flex;
+    height: 5vh;
+    color: white;
+    font-size: 0.8vw;
+    justify-content: space-around;
+    align-items: center;
+    border: none;
+    background-color: #BA5112;
+    border-radius: 0.5rem;
+    padding: 1.4vw;
+    margin-right: 1vw;
+}
+
+.sign-out-btn img{
+    margin-left: 0.5rem;
+    width: 0.8vw;
+}
+
+.header-app-title{
+    color: #BA5112;
+    font-weight: 600;
+}

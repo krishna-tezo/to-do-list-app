@@ -1,0 +1,53 @@
+<div class="task-list-main">
+  <app-welcome-banner *ngIf="activePage === 'dashboard'"></app-welcome-banner>
+
+  <div class="task-list-header">
+    <p class="task-list-header-title">{{ title }}</p>
+    <div>
+      <span *ngIf="activePage === 'dashboard'" class="task-list-header-delete"
+        >Delete All</span
+      >
+      <span class="task-list-header-date">{{ formattedDate }}</span>
+    </div>
+  </div>
+
+  <div class="task-stats">
+    <div class="task-lists">
+      <div
+        *ngFor="let task of taskListToShow"
+        [ngClass]="{ active: task.status == 1 }"
+        class="task"
+        (click)="toggleDescription($event)"
+      >
+        <img [src]="getSrcLink(task)" alt="" />
+        <p>{{ task.title }}</p>
+
+        <div class="task-description hide">
+          <div class="task-title">
+            <p class="title">{{ task.title }}</p>
+            <p class="time">Added 5 hours ago</p>
+          </div>
+          <div class="description">
+            <p>Description</p>
+            <p>{{ task.description }}</p>
+          </div>
+          <div class="task-customization flex">
+            <div>
+              <img [src]="getSrcLink(task)" alt="" class="hekbox icon" />
+            </div>
+            <div>
+              <img src="assets/edit-btn.svg" alt="" class="edit icon" />
+              <img src="assets/delete-btn.svg" alt="" class="delete icon" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-progress-tracker
+      *ngIf="activePage === 'dashboard'"
+      [progressPercentage]="progressPercentage"
+    >
+      app
+    </app-progress-tracker>
+  </div>
+</div>

@@ -1,0 +1,99 @@
+.auth-main {
+    height: 99vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/assets/m.svg");
+    background-size: cover;
+  }
+  
+  .signup-container, .login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 70%;
+    width: 40%;
+    border-radius: 3%;
+    box-shadow:4px 4px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .signup-container {
+    background-color: #EDB046;
+    color: #ffff;
+  }
+  
+  .login-container {
+    background-color: #ffff;
+  }
+  
+  .auth-header {
+    text-align: center;
+  }
+  
+  .auth-header-title {
+    font-weight: 700;
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  .auth-header-title.login{
+    color: #BA5112;
+  }
+  
+  .auth-header-description {
+    font-size: 1rem;
+    margin: 0.2rem;
+  }
+  
+  .auth-credential-input {
+    width: 80%;
+  }
+  
+  .auth-form {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .auth-form input {
+    border: none;
+    border-radius: 5px;
+    height: 2.5rem;
+    padding: 5px 10px;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  ::placeholder {
+    font-weight: 500;
+    color: #B5B5B5;
+  }
+  
+  .auth-submit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .signup-submit-btn, .login-submit-btn {
+    font-weight: 500;
+    border: none;
+    border-radius: 7px;
+    height: 3rem;
+    width: 45%;
+    color: #ffff;
+  }
+  
+  .signup-submit-btn {
+    background-color: #BA5112;
+  }
+  
+  .login-submit-btn {
+    background-color: #EDB046;
+  }
+  
+  .redirect-to-auth {
+    color: #BA5112;
+  }
+  

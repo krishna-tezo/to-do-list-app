@@ -1,0 +1,43 @@
+<div class="auth-main">
+  <div [ngClass]="getContainerClass()">
+    <div class="auth-header">
+      <p class="auth-header-title" [class.login]="isLoginPage()">To-Do App</p>
+      <p class="auth-header-description">
+        Start organizing your life day by day
+      </p>
+    </div>
+
+    <div class="auth-credential-input">
+      <form #authForm="ngForm" (ngSubmit)="authorizeUser(authForm.value.username, authForm.value.password)" class="auth-form">
+        <input
+          type="text"
+          class="auth-input-username"
+          placeholder="{{ isLoginPage() ? 'Enter your username' : 'Username' }}"
+          name="username"
+          ngModel
+          required
+        />
+
+        <input
+          type="password"
+          class="auth-input-password"
+          placeholder="{{ isLoginPage() ? 'Enter your password' : 'Password' }}"
+          name="password"
+          ngModel
+          required
+        />
+
+        <div class="auth-submit">
+          <button type="submit" [ngClass]="getButtonClass()">
+            {{ isLoginPage() ? 'Log In' : 'Sign Up' }}
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <p class="auth-login-redirection">
+      {{ isLoginPage() ? "Don't have an account? Sign up" : "Already have an account? Log in" }}
+      <a [routerLink]="getAuthLink()" class="redirect-to-auth">here</a>
+    </p>
+  </div>
+</div>

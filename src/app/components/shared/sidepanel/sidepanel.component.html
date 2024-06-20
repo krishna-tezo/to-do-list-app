@@ -1,0 +1,30 @@
+<div class="side-panel">
+  <button class="add-task-btn">
+    Add Task
+    <img src="/assets/add-task-btn.svg" alt="img" />
+  </button>
+
+  <div routerLink="dashboard" (click)="setActivePage('dashboard')">DashBoard</div>
+  <div routerLink="active"  (click)="setActivePage('active')">Active</div>
+  <div routerLink="completed" (click)="setActivePage('completed')">Completed</div>
+</div>
+
+<div class="top-panel" id="topPanel" [ngClass]="{ show: isMenuOpen }">
+  <div class="selected-menu" (click)="toggleMenu()">
+    <div>{{ selectedMenu }}</div>
+    <button class="menu-button">
+      <img src="/assets/sidepanel/dropdown.svg" alt="" />
+    </button>
+  </div>
+  <div class="menu" *ngIf="isMenuOpen">
+    <div *ngIf="selectedMenu != 'DashBoard'" (click)="selectMenu('DashBoard')">
+      DashBoard
+    </div>
+    <div *ngIf="selectedMenu != 'Active'" (click)="selectMenu('Active')">
+      Active
+    </div>
+    <div *ngIf="selectedMenu != 'Completed'" (click)="selectMenu('Completed')">
+      Completed
+    </div>
+  </div>
+</div>
